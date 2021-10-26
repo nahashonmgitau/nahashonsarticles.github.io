@@ -1,0 +1,440 @@
+html{
+  overflow-x:hidden;
+}
+body {
+  color:#fff;
+  font-family: 'Alegreya Sans';
+  color:white;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  overflow-x:hidden;
+}
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background:black;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 20px solid black;
+  border-top-color:white;
+  border-bottom-color:white;
+  border-radius:50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 0.9s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color:red;
+  color:black;
+  transition: all 0.4s;
+}
+
+.back-to-top i:hover {
+  background:lightpink;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background-image: linear-gradient(to right,rgba(0,0,90,0.9), rgba(0,0,0,0.9), rgba(0,100,90,0.9));
+  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+  z-index: 997;
+  padding: 20px 0;
+  height:auto;
+}
+@media(max-width:992px){
+  #header{
+    background-image:none;
+    background-color:honeydew;
+    box-shadow: 10px 0px 25px 0px black;
+  }
+}
+#header .logo {
+
+  }
+
+#header .logo img {
+  height:8rem;
+  width:8rem;
+  margin-top:0!important;
+  position:absolute;
+  z-index:999;
+  box-shadow: 0 0 10px 0 silver;
+  border-radius:5%;
+}
+@media(max-width:992px){
+  #header .logo img{
+    height:6rem;
+    width:6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  #header .logo {
+    height:;
+    width:;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.navbar-toggler-icon {
+  float:right;
+  margin-right:0;
+  position:absolute;
+  color:white;
+  font-size:1.5rem;
+}
+.navbar-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-nav > ul {
+  display: flex;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+  padding: 10px 0 10px 28px;
+}
+
+.navbar-nav > li > a{
+  display: block;
+  position: relative;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+@media(max-width:900px){
+  .navbar-nav {
+    margin-top:calc(5vh);
+  }
+  .navbar-nav > li > a{
+    text-align:center;
+    background-color:#222;
+    color:#fff;
+    border-radius:10px;
+    z-index:9999;
+    margin-top:10px;
+    box-shadow:0 0 10px 0 blue;
+  }
+  .navbar-nav > li > a:hover{
+    color:red!important;
+  }
+  .navbar-nav .active a{
+    background-color:navy;
+  }
+}
+.navbar-nav > li > a:before {
+  content:"";
+  position: absolute;
+  width:0;
+  height:2px;
+  bottom:0px;
+  left: 0;
+  background-color:orange;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-nav a:hover:before, .navbar-nav li:hover > a:before, .navbar-nav .active > a:before {
+  visibility: visible;
+  width: 95%;
+}
+@media(max-width: 900px){
+  .navbar-nav a:hover:before, .navbar-nav li:hover > a:before, .navbar-nav .active > a:before {
+    visibility: hidden;
+  }
+}
+.navbar-nav a:hover, .navbar-nav, .navbar-nav li:hover > a {
+  color:gold;
+}
+.navbar-nav .active a{
+  color:greenyellow;
+}
+@media (max-width: 900px) {
+  .navbar-nav > li > a {
+
+  }
+}
+/*--------------------------------------------------------------
+# Header Social Links
+--------------------------------------------------------------*/
+.header-social-links {
+  padding-left: 20px;
+}
+
+.header-social-links a {
+  color: #222222;
+  padding-left: 6px;
+  display: inline-block;
+  line-height: 1px;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.header-social-links a:hover {
+  color: #34b7a7;
+}
+
+@media (max-width: 992px) {
+  .header-social-links {
+    padding: 0 48px 0 0;
+  }
+}
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background-color: #e7f8f6;
+}
+
+.section-title {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color:#fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #34b7a7;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  text-align: center;
+  padding: 70px 20px 80px 20px;
+  transition: all ease-in-out 0.3s;
+  background-image: linear-gradient(blue, green);
+  border-radius:5%;
+  width:100%;
+}
+.services .icon-box:hover{
+    box-shadow: 0 0 35px 0 white;
+}
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+  position: relative;
+}
+
+.services .icon-box .icon i {
+  font-size: 36px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.services .icon-box .icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.services .icon-box .icon svg path {
+  transition: 0.5s;
+  fill: #f5f5f5;
+}
+
+.services .icon-box h4 {
+  font-weight: 600;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+}
+
+.services .icon-box h4 a {
+  color:white;
+  transition: ease-in-out 0.3s;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  color:white;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .iconbox-blue i {
+  color: #47aeff;
+}
+
+.services .iconbox-blue:hover .icon i {
+  color: #fff;
+}
+
+.services .iconbox-blue:hover .icon path {
+  fill: #47aeff;
+}
+
+.services .iconbox-orange i {
+  color: #ffa76e;
+}
+
+.services .iconbox-orange:hover .icon i {
+  color: #fff;
+}
+
+.services .iconbox-orange:hover .icon path {
+  fill: #ffa76e;
+}
+
+.services .iconbox-pink i {
+  color: #e80368;
+}
+
+.services .iconbox-pink:hover .icon i {
+  color: #fff;
+}
+
+.services .iconbox-pink:hover .icon path {
+  fill: #e80368;
+}
+
+.services .iconbox-yellow i {
+  color: #ffbb2c;
+}
+
+.services .iconbox-yellow:hover .icon i {
+  color: #fff;
+}
+
+.services .iconbox-yellow:hover .icon path {
+  fill: #ffbb2c;
+}
+
+.services .iconbox-red i {
+  color: #ff5828;
+}
+
+.services .iconbox-red:hover .icon i {
+  color: #fff;
+}
+
+.services .iconbox-red:hover .icon path {
+  fill: #ff5828;
+}
+
+.services .iconbox-teal i {
+  color: #11dbcf;
+}
+
+.services .iconbox-teal:hover .icon i {
+  color: #fff;
+}
+
+.services .iconbox-teal:hover .icon path {
+  fill: #11dbcf;
+}
+.row iframe{
+  margin-right:auto;
+  margin-left:auto;
+  text-align:center;
+  width:90%;
+  height:90%;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background-color:black;
+  padding: 30px 0;
+  color:#fff;
+  font-size: 14px;
+  text-align: center;
+  width:100%;
+}
+#footer .credits {
+  padding-top: 5px;
+  font-size: 13px;
+}
+
+
