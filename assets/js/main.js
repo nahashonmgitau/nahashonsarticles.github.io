@@ -63,7 +63,7 @@
   $('.back-to-top').click(function() {
     $('html, body').animate({
       scrollTop:0
-    }, 1800, 'easeInOutExpo');
+    }, 1000, 'easeInOutExpo');
     return false;
   });
 
