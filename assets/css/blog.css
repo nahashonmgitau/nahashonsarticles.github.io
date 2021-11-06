@@ -29,12 +29,12 @@ body {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 20px solid black;
+  border: 2px solid black;
   border-top-color:white;
   border-bottom-color:white;
   border-radius:50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   -webkit-animation: animate-preloader 1s linear infinite;
   animation: animate-preloader 0.9s linear infinite;
 }
@@ -85,138 +85,69 @@ body {
 }
 
 /*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-#header {
-  background-image: linear-gradient(to right,rgba(0,0,90,0.9), rgba(0,0,0,0.9), rgba(0,100,90,0.9));
-  box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
-  z-index: 997;
-  padding: 20px 0;
-  height:auto;
-}
-@media(max-width:992px){
-  #header{
-    background-image:none;
-    background-color:honeydew;
-    box-shadow: 10px 0px 25px 0px black;
-  }
-}
-#header .logo {
-
-  }
-
-#header .logo img {
-  height:8rem;
-  width:8rem;
-  margin-top:0!important;
-  position:absolute;
-  z-index:999;
-  box-shadow: 0 0 10px 0 silver;
-  border-radius:5%;
-}
-@media(max-width:992px){
-  #header .logo img{
-    height:6rem;
-    width:6rem;
-  }
-}
-
-@media (max-width: 992px) {
-  #header .logo {
-    height:;
-    width:;
-  }
-}
-
-/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-.navbar-toggler-icon {
-  float:right;
-  margin-right:0;
-  position:absolute;
-  color:white;
-  font-size:1.5rem;
+nav{
+    height: 6rem;
+    width: 100vw;
+    margin-top: 0 !important;
+    background-image: linear-gradient(to right,rgba(0,0,0,0.2), rgba(0,0,0,0.9), rgba(0,100,90,0.9));
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
 }
-.navbar-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/*Styling logo*/
+.logo{
+    padding:1vh 1vw;
+    text-align: center;
+    margin-top: 3rem;
 }
-
-.navbar-nav > ul {
-  display: flex;
+.logo img {
+    height: 9rem;
+    width: 9rem;
 }
-
-.nav-menu > ul > li {
-  position: relative;
-  white-space: nowrap;
-  padding: 10px 0 10px 28px;
+.nav-link {
+  font-size:1.1rem;
+  font-family: "Open Sans", sans-serif;
 }
-
-.navbar-nav > li > a{
-  display: block;
-  position: relative;
-  color: #fff;
-  transition: 0.3s;
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-}
-@media(max-width:900px){
-  .navbar-nav {
-    margin-top:calc(5vh);
+nav ul li .fa{
+    color:gold;
   }
-  .navbar-nav > li > a{
-    text-align:center;
+.navbar-nav a:hover{
+  border:1px dashed teal;
+  border-radius:10px;
+}
+.navbar-nav .active{
+  border:1px solid green;
+  border-radius:10px;
+}
+/*Stying for small screens*/
+@media screen and (max-width: 999px){
+  nav{
+    position:fixed;
+    z-index: 3;
+    background-image: linear-gradient(rgba(10,0,50,0.9), rgba(0,0,0,0.1));
+  }
+  nav ul{
     background-color:#222;
-    color:#fff;
-    border-radius:10px;
-    z-index:9999;
-    margin-top:10px;
-    box-shadow:0 0 10px 0 blue;
+    border-radius: 10px;
+    text-align: center;
   }
-  .navbar-nav > li > a:hover{
-    color:red!important;
+  .logo{
+    margin-top: 0 !important;
   }
-  .navbar-nav .active a{
-    background-color:navy;
+  .logo img{
+    height: 5.5rem;
+    width: 5.5rem;
   }
-}
-.navbar-nav > li > a:before {
-  content:"";
-  position: absolute;
-  width:0;
-  height:2px;
-  bottom:0px;
-  left: 0;
-  background-color:orange;
-  visibility: hidden;
-  width: 0px;
-  transition: all 0.3s ease-in-out 0s;
+  nav .fa{
+    display: block;
+    font-size: 30px;
+  }
 }
 
-.navbar-nav a:hover:before, .navbar-nav li:hover > a:before, .navbar-nav .active > a:before {
-  visibility: visible;
-  width: 95%;
-}
-@media(max-width: 900px){
-  .navbar-nav a:hover:before, .navbar-nav li:hover > a:before, .navbar-nav .active > a:before {
-    visibility: hidden;
-  }
-}
-.navbar-nav a:hover, .navbar-nav, .navbar-nav li:hover > a {
-  color:gold;
-}
-.navbar-nav .active a{
-  color:greenyellow;
-}
-@media (max-width: 900px) {
-  .navbar-nav > li > a {
-
-  }
-}
 /*--------------------------------------------------------------
 # Header Social Links
 --------------------------------------------------------------*/
