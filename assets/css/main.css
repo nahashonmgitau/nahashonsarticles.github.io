@@ -126,7 +126,11 @@ section:nth-child(2){
   color: #ce1212;
 }
 .breadcrumbs h2 span{
-  color: #ce1212;
+  color: #fff !important;
+  background-color: #ce1212;
+  border-radius:5%;
+  box-shadow:0 0 1px black;
+  background: linear-gradient(40deg,  #ce1212 60%, transparent 5%);
   font-family: 'Caveat', cursive;
 }
 
@@ -416,6 +420,7 @@ section:nth-child(1){
 .testimonials .testimonial-wrap .testimonial-item iframe{
   max-width: 100%; 
   max-height: 75%;
+  border-radius: 5%;
 }
 .blog .posts-list blockquote{
   max-width: 100%; 
@@ -842,7 +847,6 @@ section:nth-child(1){
   box-sizing: content-box;
   padding: 30px;
   margin: 30px 10px;
-  box-shadow: 0px 0 15px rgba(0, 0, 0, 0.5);
   position: relative;
   background: #fff;
   border-radius: 10px;
@@ -915,7 +919,9 @@ section:nth-child(1){
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-primary);
+  background: rgba(14, 29, 52, 1);
+  width: 14px;
+  height: 14px;
 }
 
 @media (max-width: 767px) {
@@ -933,13 +939,73 @@ section:nth-child(1){
     left: auto;
   }
 }
+/*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
+/* Custom styling for the modal */
+.custom-modal {
+  border: none;
+  border-radius: 10px;
+}
+
+/* Style the modal header */
+.custom-modal .modal-header {
+  background-color: #3498db;
+  color: white;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Style the modal title */
+.custom-modal .modal-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Style the modal body */
+.custom-modal .modal-body {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Style the modal footer */
+.custom-modal .modal-footer {
+  border-top: none;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Adjust button colors */
+.custom-modal .btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+/* Style close button */
+.custom-modal .btn-close {
+  color: white;
+}
+
+/* Adjust modal size for small screens */
+@media (max-width: 576px) {
+  .custom-modal {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
   position: relative;
-  background: rgba(14, 29, 52, 0.9);
+  background: rgba(14, 29, 52, 1);
   padding: 30px 0; 
   color: #fff;
   font-size: 14px;
